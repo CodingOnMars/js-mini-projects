@@ -95,7 +95,7 @@ a {
 }
 
 .projects__desc {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 2rem;
 }
 
@@ -107,6 +107,7 @@ a {
 }
 
 .gallery__link {
+  display: inline-block;
   padding: 1.5rem;
   font-size: 1.2rem;
   text-transform: uppercase;
