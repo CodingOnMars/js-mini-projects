@@ -25,12 +25,12 @@ body {
 .title,
 .subtitle {
   text-align: center;
-  text-transform: uppercase;
 }
 
 .title {
   margin-bottom: 20px;
   font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 .color-switch__items {
