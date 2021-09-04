@@ -6,26 +6,23 @@ const hexSquares = document.querySelectorAll('.square-hex');
 const rgbSquares = document.querySelectorAll('.square-rgb');
 const hslSquares = document.querySelectorAll('.square-hsl');
 
-const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f'];
 
 btn.addEventListener('click', () => {
-  // Generate random hex color
-  let hexColor = '#';
-  for (let i = 0; i < 6; i++) {
-    hexColor += hex[hexRandomNumber()];
-  }
+  let hexColor = '';
+  hexColor += getRandomHex();
   idHex.textContent = hexColor;
   hexSquares.forEach((square) => {
     square.style.backgroundColor = hexColor;
   });
-  // Generate random rgb color
+
   let rgbColor = '';
   rgbColor += getRandomRgb();
   idRgb.textContent = rgbColor;
   rgbSquares.forEach((square) => {
     square.style.backgroundColor = rgbColor;
   });
-  // Generate random hsl color
+
   let hslColor = '';
   hslColor += getRandomHsl();
   idHsl.textContent = hslColor;
@@ -34,18 +31,27 @@ btn.addEventListener('click', () => {
   });
 });
 
-const hexRandomNumber = () => Math.floor(Math.random() * hex.length);
+// Generate random hex color
+const getRandomHex = () => {
+  const hexRandomNumber = () => Math.floor(Math.random() * hex.length);
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[hexRandomNumber()];
+  }
+  return color;
+};
 
-const randomNumberBetween = (min, max) =>
-  min + Math.floor(Math.random() * (max - min + 1));
-
+// Generate random rgb color
 const getRandomRgb = () => {
+  const randomNumberBetween = (min, max) =>
+    min + Math.floor(Math.random() * (max - min + 1));
   const r = randomNumberBetween(0, 255);
   const g = randomNumberBetween(0, 255);
   const b = randomNumberBetween(0, 255);
   return `rgb(${r}, ${g}, ${b})`;
 };
 
+// Generate random hsl color
 const getRandomHsl = () => {
   const h = Math.floor(Math.random() * 360);
   const s = Math.floor(Math.random() * (100 + 1)) + '%';
