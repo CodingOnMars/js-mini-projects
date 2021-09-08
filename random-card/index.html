@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random business card</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" defer src="script.js"></script>
+</head>
+
+<body>
+    <main class="main">
+        <section class="random-card">
+            <div class="container">
+                <h1 class="random-card__title">Random business card</h1>
+                <div class="random-card__items card">
+                    <div class="card__box">
+                        <div class="card__item">
+                            <h2 class="card__title" data-id="name">Full name</h2>
+                            <p class="card__subtitle">CEO</p>
+                        </div>
+                        <div class="card__item">
+                            <p class="card__value" data-id="phone">123-456-7890</p>
+                            <p class="card__value" data-id="email">hello@email.com</p>
+                            <p class="card__value" data-id="website">website.com</p>
+                        </div>
+                    </div>
+                    <div class="card__box">
+                        <div class="card__item">
+                            <img class="card__photo" src="https://randomuser.me/api/portraits/men/75.jpg"
+                                alt="User photo">
+                            <h3 class="card__value" data-id="company-name">Company</h3>
+                            <p class="card__value" data-id="slogan">Slogan</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="random-card__btn btn">Generate data</button>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
