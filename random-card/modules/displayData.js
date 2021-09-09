@@ -9,15 +9,10 @@ const nickname = get("[data-id='username']");
 const userImage = get('.card__image');
 const companyName = get("[data-id='company-name']");
 const companySlogan = get("[data-id='phrase']");
-const errorText = get('.error');
 
 const displayData = (data) => {
   if (data) {
     hideLoading();
-  } else {
-    hideLoading();
-    errorText.classList.add('error--active');
-    setTimeout(() => errorText.classList.remove('error--active'), 7000);
   }
   userName.textContent = data.name;
   phone.textContent = data.phone;
