@@ -1,7 +1,10 @@
 import { showLoading } from './helper/toggleLoading.js';
+import { hideLoading } from './helper/toggleLoading.js';
+import get from './helper/getElement.js';
 
 const userURL = 'https://randomuser.me/api/';
 const sloganURL = 'https://corporatebs-generator.sameerkumar.website/';
+const errorText = get('.error');
 
 const getData = async () => {
   showLoading();
@@ -32,6 +35,9 @@ const getData = async () => {
     };
   } catch (error) {
     console.log(error);
+    hideLoading();
+    errorText.classList.add('error--active');
+    setTimeout(() => errorText.classList.remove('error--active'), 7000);
   }
 };
 
