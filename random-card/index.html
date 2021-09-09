@@ -14,33 +14,30 @@
     <main class="main">
         <section class="random-card">
             <div class="container">
-                <h1 class="random-card__title">Random business card</h1>
+                <div class="loading hide-loading">
+                    <img class="loading__img" src="images/loader.svg" alt="Loading..." width="50" height="50">
+                </div>
+                <h1 class="random-card__title">Random Business Card</h1>
+                <p class="error">❌Sorry, could not load new data.</p>
                 <div class="random-card__items card">
-                    <div class="card__box">
-                        <div class="card__item">
-                            <h2 class="card__title" data-id="name">Full name</h2>
-                            <p class="card__subtitle">CEO</p>
-                        </div>
-                        <div class="card__item">
-                            <p class="card__value" data-id="phone">123-456-7890</p>
-                            <p class="card__value" data-id="email">hello@email.com</p>
-                            <p class="card__value" data-id="username">@name</p>
-                        </div>
+                    <div class="card__item">
+                        <img class="card__image" src="https://randomuser.me/api/portraits/men/9.jpg" alt="User photo">
+                        <h3 class="card__value card__value--company" data-id="company-name">EvilCorp</h3>
+                        <p class="card__value card__value--slogan" data-id="phrase">Competently Empower Agile
+                            Virtualization</p>
                     </div>
-                    <div class="card__box">
-                        <div class="card__item">
-                            <img class="card__photo" src="https://randomuser.me/api/portraits/men/9.jpg"
-                                alt="User photo">
-                            <h3 class="card__value" data-id="company-name">Company</h3>
-                            <p class="card__value" data-id="phrase">Slogan</p>
-                        </div>
+                    <div class="card__item">
+                        <h2 class="card__title" data-id="name">John Doe</h2>
+                        <p class="card__subtitle">ceo</p>
+                        <p class="card__value card__value--phone" data-id="phone">123-456-7890</p>
+                        <p class="card__value card__value--email" data-id="email">hello@email.com</p>
+                        <p class="card__value card__value--user" data-id="username">@evilceo</p>
                     </div>
                 </div>
                 <button class="random-card__btn btn">Generate data</button>
             </div>
         </section>
     </main>
-
 </body>
 
 </html>

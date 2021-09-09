@@ -5,8 +5,8 @@ import displayData from './modules/displayData.js';
 const btn = get('.btn');
 
 const showData = async () => {
-  const info = await getData();
-  displayData(info);
+  const data = await getData();
+  displayData(data);
 };
 
 btn.addEventListener('click', showData);

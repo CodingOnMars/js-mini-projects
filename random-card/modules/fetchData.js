@@ -1,7 +1,10 @@
+import { showLoading } from './helper/toggleLoading.js';
+
 const userURL = 'https://randomuser.me/api/';
 const sloganURL = 'https://corporatebs-generator.sameerkumar.website/';
 
 const getData = async () => {
+  showLoading();
   try {
     const response = await Promise.all([fetch(userURL), fetch(sloganURL)]);
 
