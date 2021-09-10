@@ -1,36 +1,11 @@
-html {
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-li {
-  margin: 0;
-  font-size: inherit;
-}
-
-/* ul[class] {
-  list-style: none;
-} */
 
 :root {
   --main-color: #0c131d;
@@ -45,6 +20,8 @@ li {
 
 body {
   font-family: system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background: var(--body-bg);
   background: var(--body-bg-linear);
 }
@@ -151,20 +128,20 @@ a {
 @media (hover: hover) and (pointer: fine) {
   .projects__link {
     opacity: 0.8;
-    transition: opacity 0.5s linear;
+    transition: opacity 0.5s;
   }
 
   .projects__link:hover {
-    transition: opacity 0.5s linear;
+    transition: opacity 0.5s;
     opacity: 1;
   }
 
   .gallery__link {
-    transition: transform 0.5s ease-out;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
   .gallery__link:hover {
-    transition: transform 0.5s ease-out;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
     transform: scale(1.05);
   }
 }
